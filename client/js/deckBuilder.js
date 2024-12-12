@@ -9,9 +9,9 @@ export const deckBuilder = {
         const deckModels = await response.json();
         const deckModel = deckModels[deckType];
 
-        // Actualizar los nombres de los contenedores
+        // Actualizar los nombres de los contenedores en base a que tipo de deck se esta utilizando
         const container = document.getElementById('container');
-        container.innerHTML = ''; // Limpiar contenedores existentes
+        container.innerHTML = '';
         deckModel.suits.forEach(suit => {
             const dropZone = document.createElement('div');
             dropZone.id = suit;
